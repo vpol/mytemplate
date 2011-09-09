@@ -1,13 +1,24 @@
 [app:{{project}}]
 use = egg:{{project}}
+mako.directories={{project}}:templates
 reload_templates = true
-debug_authorization = false
-debug_notfound = false
-debug_routematch = false
+#debug_authorization = true
+debug_notfound = true
+debug_routematch = true
 debug_templates = true
 default_locale_name = en
-mako.directories={{project}}:templates
-sqlalchemy.url = sqlite:///%(here)s/{{project}}.db
+sqlalchemy.url = sqlite://
+#sqlalchemy.url = sqlite:///%(here)s/{{project}}.db
+mako.directories=lsapi:templates
+beaker.session.type = memcached
+beaker.session.url = 127.0.0.1:11211
+beaker.session.lock_dir = %(here)s/lock
+beaker.session.key = session
+beaker.session.secret = loozy_session_seekrit
+beaker.session.cookie_on_exception = true
+authentication_policy = AuthTktAuthenticationPolicy('seekrit')
+authorization_policy = ACLAuthorizationPolicy()
+cache.example = 127.0.0.1:11211
 
 [pipeline:main]
 pipeline =

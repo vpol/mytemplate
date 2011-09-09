@@ -1,0 +1,17 @@
+# -*- coding: utf-8 -*-
+from datetime import datetime, date
+import logging
+import transaction
+
+__author__ = 'Victor Poluksht'
+
+log = logging.getLogger(__name__)
+
+def populate():
+    
+    from {{project}}.models.common import Session
+    from {{project}}.models.tables import *
+
+    session = Session()
+
+    transaction.commit()

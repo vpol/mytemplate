@@ -9,7 +9,6 @@ debug_templates = true
 default_locale_name = en
 sqlalchemy.url = sqlite://
 #sqlalchemy.url = sqlite:///%(here)s/{{project}}.db
-mako.directories=lsapi:templates
 beaker.session.type = memcached
 beaker.session.url = 127.0.0.1:11211
 beaker.session.lock_dir = %(here)s/lock

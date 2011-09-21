@@ -103,7 +103,7 @@ class MyAuthorisationPolicy(object):
     def principals_allowed_by_permission(self, context, permission):
         return
 
-## {{{ http://code.activestate.com/recipes/496942/ (r1)
+# http://code.activestate.com/recipes/496942/ (r1)
 def xssescape(text):
     """Gets rid of < and > and & and, for good measure, :"""
     return escape(text, quote=True).replace(':','&#58;')
@@ -211,4 +211,4 @@ class XssCleaner(HTMLParser):
                     tg += ' %s=""' % y
             tg += "> "
         return xssescape(tg.strip())
-## end of http://code.activestate.com/recipes/496942/ }}}
+# end of http://code.activestate.com/recipes/496942/ }}}

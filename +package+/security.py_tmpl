@@ -90,6 +90,8 @@ __author__ = 'Victor Poluksht'
 #            for permission in role.permissions:
 #                p.add(permission.pm_name)
 #        return list(p)
+def CheckPermissions(userid, request):
+    return
 
 class MyAuthorisationPolicy(object):
 

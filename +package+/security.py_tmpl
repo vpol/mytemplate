@@ -27,10 +27,9 @@ __author__ = 'Victor Poluksht'
 #    if not userid in permissions_cache:
 #        permissions_cache[userid] = []
 #
-#    session = Session()
 #
 #    try:
-#        user = session.query(User).filter(User.us_id == userid).one()
+#        user = meta.session.query(User).filter(User.us_id == userid).one()
 #    except NoResultFound:
 #        return False
 #    else:
@@ -45,11 +44,10 @@ __author__ = 'Victor Poluksht'
 #
 #def ManageRole(userid, action, role):
 #
-#    session = Session()
 #
 #    try:
-#        user = session.query(User).filter(User.us_id == userid).one()
-#        role = session.query(Roles).filter(Role.ro_name == role).one()
+#        user = meta.session.query(User).filter(User.us_id == userid).one()
+#        role = meta.session.query(Roles).filter(Role.ro_name == role).one()
 #    except NoResultFound:
 #        return False
 #    else:
@@ -77,11 +75,9 @@ __author__ = 'Victor Poluksht'
 #        return []
 #
 #    return permissions_cache[userid]
-
-#    session = Session()
 #
 #    try:
-#        user = session.query(User).filter(User.us_id == userid).one()
+#        user = meta.session.query(User).filter(User.us_id == userid).one()
 #    except NoResultFound:
 #        return []
 #    else:

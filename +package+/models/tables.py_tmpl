@@ -1,7 +1,0 @@
-# -*- coding: utf-8 -*-
-from datetime import datetime
-import sqlalchemy as sa
-from sqlalchemy import orm
-from {{project}}.models.common import meta
-
-__author__ = 'Victor Poluksht'

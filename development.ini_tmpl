@@ -8,6 +8,7 @@ debug_routematch = true
 debug_templates = true
 default_locale_name = en
 sqlalchemy.url = sqlite://
+sqlalchemy.encoding = utf-8
 #sqlalchemy.url = sqlite:///%(here)s/{{project}}.db
 beaker.session.type = memcached
 beaker.session.url = 127.0.0.1:11211

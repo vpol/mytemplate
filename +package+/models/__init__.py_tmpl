@@ -4,3 +4,4 @@ from {{project}}.models.common import meta
 from {{project}}.models.tables import *
 
 __author__ = 'Victor Poluksht'
+

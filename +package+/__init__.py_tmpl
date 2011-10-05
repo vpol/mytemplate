@@ -38,6 +38,6 @@ def main(global_config, **settings):
 
     # Index (main page)
     #config.add_route('Index', '/')
-    #config.add_view('{{project}}.views.index.Index', route_name = 'Index', renderer='{{project}}:templates/Index.mako')
+    #config.add_view('{{project}}.views.Index', route_name = 'Index', renderer='{{project}}:templates/Index.mako')
 
     return config.make_wsgi_app()

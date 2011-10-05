@@ -9,9 +9,6 @@ log = logging.getLogger(__name__)
 
 def populate():
     
-    from {{project}}.models.common import Session
-    from {{project}}.models.tables import *
-
-    session = Session()
+    from {{project}}.models.common import meta
 
     transaction.commit()

@@ -1,5 +1,4 @@
 import os
-import sys
 
 from setuptools import setup, find_packages
 
@@ -11,13 +10,11 @@ requires = [
     'pyramid',
     'SQLAlchemy',
     'transaction',
-    'repoze.tm2>=1.0b1', # default_commit_veto
+    'pyramid_tm',
+    'pyramid_debugtoolbar',
     'zope.sqlalchemy',
-    'WebError',
+    'waitress',
     ]
-
-if sys.version_info[:3] < (2,5,0):
-    requires.append('pysqlite')
 
 setup(name='{{project}}',
       version='0.0',
@@ -41,7 +38,7 @@ setup(name='{{project}}',
       entry_points = """\
       [paste.app_factory]
       main = {{package}}:main
+      [console_scripts]
+      populate_{{project}} = {{project}}.scripts.populate:main
       """,
-      paster_plugins=['pyramid'],
       )
-
